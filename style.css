@@ -32,9 +32,17 @@ header {
 
 .preparacion {
     display: flex;
-    word-wrap: normal;
-    background-color: aqua;
     justify-content: space-around;
+    flex-grow: 1;
+    flex-direction: row;
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .preparacion {
+        flex-direction: column;
+    }
 }
 
 .preimagen {
@@ -44,6 +52,8 @@ header {
     border-width: 2px;
     border-style: groove;
     border-color: blueviolet;
+    flex-basis: 50%;
+
 
 
     /*
@@ -63,6 +73,7 @@ header {
     border-width: 2px;
     border-style: groove;
     border-color: blueviolet;
+    flex-basis: 50%;
 
 
     /*
