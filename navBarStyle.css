@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 70px 20px 0px;
+}
+
+.header {
+    background-color: #fbcf34;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 60px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link-active {
+    background-color: #E69553;
+    transition: 0.5s;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-toggle {
+    color: black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding:  0 20px;
+    line-height: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+@media  (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    .header {
+        height: 50px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 50px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #E69553;
+        position: fixed;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 50px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link-active {
+        background: none;
+        color: #fbcf34;
+        font-weight: bold;
+    }
+    .nav-toggle {
+        display: block;
+        border: none;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    .nav-toggle:focus:not( :focus-visible ) {
+        outline : none ;
+    }
+}
+     
