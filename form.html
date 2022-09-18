@@ -7,9 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hamburger</title>
   <link rel="stylesheet" href="formStyle.css">
+  <link rel="stylesheet" href="navBarStyle.css">
+  <script src="https://kit.fontawesome.com/d18018659d.js" crossorigin="anonymous"></script>
+  <script defer src="/index.js"></script>
 </head>
 
 <body>
+  <header class="header">
+    <nav class="nav">
+        <a href="/index.html" class="logo nav-link">CodoBurguer</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a href="/index.html" class="nav-menu-link">Menu</a></li>
+            <li class="nav-menu-item"><a href="/about.html" class="nav-menu-link nav-link">Sobre nosotros</a></li>
+            <li class="nav-menu-item"><a href="/form.html" class="nav-menu-link nav-link  nav-link nav-menu-link-active">Registrate</a></li>
+            <li class="nav-menu-item"><a href="/login.html" class="nav-menu-link nav-link">Ingresa</a></li>
+        </ul>
+    </nav>
+</header>
     <div class="modal">
         <div class="modal__container">
           <div class="modal__featured">
