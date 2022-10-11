@@ -91,19 +91,47 @@
   }
 
   .btn-orden{
-   font-size: large;
+   font-size: x-large;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    border-radius: 20px;
    border-style: none;
-   background-color: rgb(255, 234, 0);
+   background-color: #fbcf34;
    padding: 5px;
    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
    scrollbar-shadow-color: black;
-
   }
 
+  .footer{
+    background-color: #fbcf34;
+    display: grid;
+    grid-template-columns: 32% 32% auto;
+    grid-template-areas: "sucursales seguir sobre";
+    justify-content: center;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .sucursales {
+    grid-area: sucursales;
+    padding-top: 10px;
+  }
+  .seguir {
+    grid-area: seguir;
+    padding-top: 10px;
+  }
+  .sobre {
+    grid-area: sobre;
+    padding-top: 10px;
+  }
+
+  .item-li{
+    list-style: none;
+    margin-right: 40px;
+    padding-top: 10px;
+    font-size:small;
+    font-family: monospace;
+  }
 
 .main   {grid-area: main; background-color: orange;}
 .sidebar {grid-area: sidebar; background-color: blue;}
-.footer {grid-area: footer; background-color: violet;}
 
