@@ -9,3 +9,109 @@
     /* -ms-transform: translateX(-20%) translateY(-50%); */
     transform: translateX(-25%) translateY(-85%);
 }
+.container__login {
+    /* background-color: violet; */
+    position: relative;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.logo__container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* transform: translateY(-50%); */
+    opacity: 1;
+}
+.container__login .logo{
+    background-image: url("/LogoProyecto2-.png");
+    /* background-color: #fbcf34; */
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 12 ;
+    display: flex;
+   
+    
+}
+
+.form__container {
+    z-index: 10;
+   
+}
+.info__container {
+    border-style: outset;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #beb9a681;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.user-box input {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -85px;
+    left: 0;
+    color: #696969;
+    font-size: 12px;
+}
+/*Animacion*/
+.logo__container{
+    animation: float 3.5s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100%{
+        transform:  translate(0px);
+    }
+}
+@media screen and (max-width: 500px) {
+    .info__container {
+        width: 90%;
+    }
+    .curv__top {
+        transform: translateX(-25%) translateY(-85%);
+        border-radius: 50%;
+        z-index: 1px;
+        background-color: transparent;
+    }
+}
