@@ -1,7 +1,11 @@
 /* body {
     background-color: black;
 } */
-
+@import url("/formStyle.css");
+@import url("/navBarStyle.css");
+@import url("/styleIndex.css");
+@import url("/loginStyle.css");
+@import url("/aboutStyle.css");
 header {
     top: 0px;
     left: 0px;

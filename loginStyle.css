@@ -1,0 +1,11 @@
+.curv__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 200%;
+    background-color: #fbcf34;
+    border-radius: 50%;
+    /* -ms-transform: translateX(-20%) translateY(-50%); */
+    transform: translateX(-25%) translateY(-85%);
+}
