@@ -134,4 +134,15 @@
 
 .main   {grid-area: main; background-color: orange;}
 .sidebar {grid-area: sidebar; background-color: blue;}
+.people {
+  display: flex;
+}
+.img__person {
+  object-fit: contain;
+  height: 100px;
+  width: 50px;
+  max-height: 50px;
+  overflow: hidden;
 
+
+}

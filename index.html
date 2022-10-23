@@ -11,73 +11,7 @@
     <link rel="stylesheet" href="styleIndex.css">
     <script src="https://kit.fontawesome.com/d18018659d.js" crossorigin="anonymous"></script>
     <script defer src="./index.js"></script>
-    <style>
-        .principal {
-            background-color: black;
-
-
-        }
-
-        .cabecera {
-            display: inline-flex;
-            z-index: 10;
-            font-size: 30px;
-
-            background-color: #fbcf34;
-            vertical-align: middle;
-            width: 100%;
-            margin-top: 0%;
-        }
-
-
-        .menu {
-
-            text-align: left;
-            flex: 50%;
-        }
-
-        .usuario {
-            flex: 50%;
-            text-align: right;
-            color: red;
-
-        }
-
-        .left-menu {
-            padding: 10px;
-        }
-
-        .right-menu {
-            padding: 10px;
-        }
-
-        .preimagen {
-            background-color: #fbcf34;
-            border-top: 10px;
-            border-radius: 5px;
-            border-width: 2px;
-            border-style: groove;
-            border-color: blueviolet;
-            padding: 200px;
-            position: absolute;
-            left: 0%;
-            z-index: -1;
-
-        }
-
-        .seleccion {
-            background-color: #fbcf34;
-            border-top: 10px;
-            border-radius: 5px;
-            border-width: 2px;
-            border-style: groove;
-            border-color: blueviolet;
-            padding: 200px;
-            position: absolute;
-            left: 50%;
-            z-index: -1;
-        }
-    </style>
+  
 </head>
 
 <!-- <header class="cabecera">
@@ -108,7 +42,7 @@
             </ul>
         </nav>
     </header>
-
+<section>
     <div class="slider-container" >
         <div class="slider" id="slider">  
             <div class="slider-section">
@@ -136,15 +70,21 @@
     </div>  
       <div class="slider_btn slider_btn-right" id="btn-right">&#62;</div>
       <div class="slider_btn slider_btn-left" id="btn-left">&#60;</div>
-
+ </section>
     <br><br><br><br>
-
+<section>
     <div class="ordena">
         <a href="about.html">
             <button type="submit" class="btn-orden">Ordene aquí</button>
         </a>
     </div>
     <!-- <div class="seleccion">imagen2</div> -->
+</section>
+<section>
+    <div class="people">
+
+    </div>
+</section>
     <footer>
         <div class="footer">
             <div class="sucursales">
@@ -174,7 +114,41 @@
         </div>
     </footer>
 
-
+<script>
+    async function hola(){
+        //alert("voy a hacer el fetch")
+        
+        fetch('https://jsonplaceholder.typicode.com/photos')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            let divPeople = document.querySelector(".people");
+            for(let i = 0 ; i<100; i++){
+                let div = document.createElement("div");
+                div.classList.add("img__person");
+                let img = document.createElement("img");
+                img.src = data[i].url;
+                div.appendChild(img);
+                divPeople.appendChild(div);
+            }
+        });
+        
+    }
+    async function getApi(){
+        //alert("voy a hacer el fetch")
+        
+        fetch('https://api.covidtracking.com/v1/us/current.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            
+        });
+        
+    }
+    
+    getApi();
+    
+</script>
 </body>
 
 </html>

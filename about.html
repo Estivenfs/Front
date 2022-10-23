@@ -8,6 +8,9 @@
     <title>Prepara</title>
     <link rel="stylesheet" href="navBarStyle.css">
     <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d18018659d.js" crossorigin="anonymous"></script>
     <script defer src="/index.js"></script>
 </head>
@@ -30,38 +33,28 @@
                 </ul>
             </nav>
         </header>
-        <div class="container-banner">
-            <img src="hamburguers.jpg" alt="" class="banner">
-        </div>
 
-     <br><br><br><br>
+     <br><br>
         <h2 class="titulo">Selecciona tu hamburguesa</h2>
+        <div class="container-sabor">            
+        </div>
+<div class="img-sabor">
+    <img class="img-h" id="imagen" src="/hamburguers.jpg" alt="" >
+</div>
 
-        <button  class="sabor" value="Capresse" id="Capresse" onclick="cargaImage('NombreProyecto')">Capresse</button>
-        <button  class="sabor" value="American Chiken" id="American" onclick="cargaImage('LogoProyecto2-')">American Chiken</button>
-        <button  class="sabor" value="Gourmet" id="Gourmet">Gourmet</button>
-        <button type="submit" class="sabor" value="Teriyaki">Teriyaki</button>
-        <button type="submit" class="sabor" value="Calabresa">Calabresa</button>
-        <button type="submit" class="sabor" value="Clásica">Clásica</button>
-        <button type="submit" class="sabor" value="Hot Cheddar">Hot Cheddar</button>
-        <button type="submit" class="sabor"value="Mac&Cheese">Mac&Cheese</button>
-        <button type="submit" class="sabor">Pollo</button>
-        <button type="submit" class="sabor"value="Pollo">Doble Cheese</button>
-        <button type="submit" class="sabor"value="Doble Pollo">Doble Pollo</button>
-        <button type="submit" class="sabor"value="Mexicana">Mexicana</button>
-        <button type="submit" class="sabor"value="Argentina">Argentina</button>
-        <button type="submit" class="sabor"value="Venezolana">Venezolana</button>
-        <button type="submit" class="sabor"value="Mar y Tierra">Mar y Tierra</button>
-        <button type="submit" class="sabor"value="CheeseBurger Completa">CheeseBurger Completa</button>
-        
-<img id="imagen" src="/ubicacion.png" alt="" >
-<script>
-    function cargaImage(name){
-     let imagen= document.getElementById("imagen");
-     let urlImage = "/"+name+".png"
-     imagen.src=urlImage;
-    }
-</script>
+<input type="hidden" id="selected" value="0">
+
+<div class="agregar">
+    <button id="agregar" class="sabor" type="submit"> Agregar</button>
+</div>
+
+<div class="mi-carrito">
+
+</div>
+
+
+<script src="about.js"></script>
+
 </body>
 
 </html>
