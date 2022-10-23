@@ -126,7 +126,6 @@ function agregar(e){
         });
         hamburguesa[0].cantidad=1;
         let hamburger = hamburguesa[0];
-        let index=0;
         let encontrado=false;
         for(let i=0; i<carrito.length;i++){
             if(carrito[i].id==hamburguesaId){
@@ -135,10 +134,7 @@ function agregar(e){
                 break;
             }
         }       
-        if(encontrado){
-            
-           // carrito[index].cantidad = carrito[index].cantidad+1;
-        }else{
+        if(!encontrado){
             carrito.push({...hamburger});
         }     
         renderCarrito()
