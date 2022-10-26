@@ -59,7 +59,7 @@
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.7);
-    top: 40%;
+    top: 35%;
     transform: translateY(-50%);
     font-size: 30px;
     font-weight: bold;
@@ -145,4 +145,17 @@
   overflow: hidden;
 
 
+}
+@media screen and (max-width: 800px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .slider_btn{
+    top: 40%;
+  }
 }

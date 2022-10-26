@@ -141,7 +141,35 @@ function agregar(e){
     }
     
 }
-
+function sumar(e){
+    const hamburguesaId=e.target.getAttribute('idHamburguer');
+    carrito.forEach(prod=>{
+        if(prod.id==hamburguesaId){
+            prod.cantidad+=1;
+        }
+    })
+    renderCarrito();
+}
+function restar(e){
+    const hamburguesaId=e.target.getAttribute('idHamburguer');
+    
+    let index=-1;
+    let current=-1;
+    carrito.forEach(prod=>{
+        current++;
+        if(prod.id==hamburguesaId){
+            prod.cantidad-=1;
+            if (prod.cantidad<=0){
+                index=current;
+            }
+        }
+    })
+    if(index>-1){
+        carrito.splice(index,1);
+        renderCarrito();
+    }
+    renderCarrito();
+}
 function renderCarrito(){
     const miCarrito = document.querySelector('.mi-carrito');
     if(carrito.length>0){
@@ -160,18 +188,34 @@ function renderCarrito(){
             carritoItem.classList.add('carrito-item');
             const prodItem = document.createElement('div');
             prodItem.classList.add('producto');
+            const mas = document.createElement('i');
+            mas.classList.add('fa-solid','fa-circle-plus','mas');
+            mas.setAttribute('idHamburguer',elem.id);
+            mas.addEventListener('click',sumar);
             const cantItem = document.createElement('div');
-            cantItem.classList.add('cantidad');            
+            cantItem.classList.add('cantidad'); 
+            const menos = document.createElement('i');
+            menos.classList.add('fa-solid','fa-circle-minus','menos');
+            menos.setAttribute('idHamburguer',elem.id);
+            menos.addEventListener('click',restar);
             cantItem.innerHTML = elem.cantidad;
             prodItem.innerHTML = elem.nombre;
 
             carritoItem.appendChild(prodItem);
-            carritoItem.appendChild(cantItem);
+
+            const contador = document.createElement('div');
+            contador.classList.add('contador');
+            contador.appendChild(menos);
+            contador.appendChild(cantItem);
+            contador.appendChild(mas);
+            carritoItem.appendChild(contador);
 
             miCarrito.appendChild(carritoItem);
 
 
         })
+    }else{
+        miCarrito.innerHTML='';
     }
 }
 document.querySelector('#agregar').addEventListener('click',agregar)

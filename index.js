@@ -58,8 +58,31 @@ try {
 } catch (error) {
   console.log("no existe slider")
 }
+const comensales = document.querySelector("#onVentilatorCurrently");
+const reseñasBuenas = document.querySelector("#hospitalizedIncrease");
+const reseñasMalas = document.querySelector("#states");
 
 
+async function getApi(){
+  //alert("voy a hacer el fetch")
+  
+  fetch('https://api.covidtracking.com/v1/us/current.json')
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      try {
+        comensales.innerHTML = "Personas que Comieron Aquí: "+ data[0].onVentilatorCurrently;
+        reseñasBuenas.innerHTML= "Reseñas Positivas: "+ data[0].hospitalizedIncrease;
+        reseñasMalas.innerHTML= "Reseñas Negativas: "+ data[0].states;
+      } catch (error) {
+        
+      }
+      
+      
+  });
+  
+}
+getApi();
 
 
 

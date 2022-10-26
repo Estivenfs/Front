@@ -16,8 +16,9 @@ body {
     
 }
 
-.title {
+.title-form {
     text-align: center;
+    
 }
 
 h1,
@@ -55,7 +56,7 @@ h5 {
 
 
 
-input {
+.modal input {
     width: calc(100% - 10px);
     min-height: 30px;
     padding-left: 5px;
@@ -65,11 +66,11 @@ input {
     border-bottom: 2px solid #f0f0f0;
 }
 
-input:valid {
+.modal input:valid {
     border-color: #24cf5f;
 }
 
-input:focus {
+.modal input:focus {
     outline: none;
     border-color: #fbcf34;
 }
@@ -162,13 +163,13 @@ input:focus {
 
 
 .modal {
-    display: -ms-flexbox;
+
     display: flex;
-    -ms-flex-pack: center;
+    
     justify-content: center;
-    -ms-flex-align: center;
+
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     padding-top: 3%;
     z-index: 100;
@@ -176,13 +177,15 @@ input:focus {
 }
 
 .modal__container {
-    display: -ms-flexbox;
+    
     display: flex;
     max-width: 675px;
     min-height: 400px;
-    margin-bottom: 125px;
+    height: 100%;
+    /* margin-top: 80px; */
+    margin-bottom: 25px;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -193,7 +196,7 @@ input:focus {
     min-width: 230px;
     padding: 20px;
     overflow: hidden;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 50px;
     border-bottom-left-radius: 5px;
 }
 
@@ -228,4 +231,9 @@ input:focus {
 .error {
     color: red;
     border-color: red;
+}
+@media screen and (max-width: 800px) {
+    .modal__container{
+        width: 90%;
+    }
 }

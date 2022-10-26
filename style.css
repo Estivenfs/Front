@@ -43,11 +43,7 @@ header {
 
 }
 
-@media screen and (max-width: 800px) {
-    .preparacion {
-        flex-direction: column;
-    }
-}
+
 
 .preimagen {
     background-color: #fbcf34;
@@ -88,4 +84,33 @@ header {
     min-width: 50%;
     */
 
+}
+.contador{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    border: solid 5px #fbcf34;
+    height: 40px;
+    padding: 5px;
+    font-style: oblique;
+    font-family: 'Oswald', sans-serif;
+    font-size: medium;
+    text-shadow: 3px 2px 1px #0f101680;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+@media screen and (max-width: 800px) {
+    .preparacion {
+        flex-direction: column;
+    }
+    .contador{
+        font-family:  sans-serif;
+        font-size: smaller;
+        height: 60px;
+    }
+    .footer{
+        width: 100%;
+    }
 }

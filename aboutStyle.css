@@ -90,17 +90,31 @@
   justify-content: center;
   text-align: center;
   padding: 3px;
+  max-width: 40px;
   background-color: #fbcf34;
   border: solid 2px #a1810a;
   border-radius: 100%;
   min-width: 30px;
-  box-shadow: 6px 5px 24px #666666;
+  /* box-shadow: 6px 5px 24px #666666; */
 }
 .producto{
   padding: 3px;
   font-family: 'Oswald', sans-serif;
   font-weight: 100;
   
+}
+.contador {
+  /* width: 50%; */
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+}
+.menos, .mas{
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
